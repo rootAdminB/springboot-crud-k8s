@@ -1,4 +1,4 @@
 FROM openjdk:8
-EXPOSE 8080
-ADD target/springboot-crud-k8s.jar springboot-crud-k8s.jar
-ENTRYPOINT ["java","-jar","/springboot-crud-k8s.jar"]
+EXPOSE 7001
+ADD build/libs/EmployeeData-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
